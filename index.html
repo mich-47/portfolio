@@ -1,56 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Under Development</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 30px;
-        }
-        .contact {
-            font-size: 1rem;
-            color: #888;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durklebark Studios</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
+  <header>
     <div class="container">
-        <h1>Portfolio Under Development</h1>
-        <p>Thank you for visiting! My portfolio website is currently under construction.</p>
-        <p>Please check back soon for updates, or feel free to contact me at <a href="mailto:michael@urquhart.cc">michael@urquhart.cc</a>.</p>
-        <p class="contact">In the meantime, you can connect with me on <a href="https://www.linkedin.com/in/michael-p-urquhart" target="_blank">LinkedIn</a>.</p>
+      <img src="images/logo.png" alt="Durklebark Studios Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Durklebark Studios</h1>
+      <p>Where Engineering Meets Creativity</p>
+      <a href="#portfolio" class="btn">View Our Work</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We are a team of engineers and creatives dedicated to designing innovative solutions for the future.</p>
+      <div class="team">
+        <div class="team-member">
+          <img src="images/team1.jpg" alt="Team Member">
+          <h3>John Doe</h3>
+          <p>Lead Engineer</p>
+        </div>
+        <!-- Add more team members here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="service-list">
+        <div class="service">
+          <h3>Engineering</h3>
+          <p>Product design, prototyping, and structural analysis.</p>
+        </div>
+        <div class="service">
+          <h3>Creative</h3>
+          <p>Branding, 3D modeling, and animation.</p>
+        </div>
+        <div class="service">
+          <h3>Integrated Solutions</h3>
+          <p>Combining engineering and creativity for unique projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="project-grid">
+        <div class="project">
+          <img src="images/project1.jpg" alt="Project 1">
+          <h3>Project 1</h3>
+          <p>A brief description of the project.</p>
+        </div>
+        <div class="project">
+          <img src="images/project2.jpg" alt="Project 2">
+          <h3>Project 2</h3>
+          <p>A brief description of the project.</p>
+        </div>
+        <!-- Add more projects here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Durklebark Studios. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">Behance</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
