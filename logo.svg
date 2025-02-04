@@ -1,0 +1,14 @@
+<svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gear Icon -->
+  <circle cx="75" cy="75" r="50" fill="#00A8E8" />
+  <rect x="65" y="25" width="20" height="100" fill="#0A1A2F" />
+  <rect x="25" y="65" width="100" height="20" fill="#0A1A2F" />
+  <circle cx="75" cy="75" r="30" fill="#00A8E8" />
+
+  <!-- Paintbrush Stroke -->
+  <path d="M 100 50 Q 150 30 200 70" stroke="#FF6B35" stroke-width="10" fill="none" stroke-linecap="round" />
+
+  <!-- Text -->
+  <text x="220" y="70" font-family="Montserrat" font-size="40" font-weight="bold" fill="#0A1A2F">Durklebark</text>
+  <text x="220" y="110" font-family="Montserrat" font-size="30" font-weight="300" fill="#0A1A2F">Studios</text>
+</svg>
