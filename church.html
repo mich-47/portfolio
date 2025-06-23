@@ -59,10 +59,13 @@
         .nav-link {
             @apply text-secc-charcoal hover:text-secc-blue relative after:content-[''] after:absolute after:w-full after:transform after:scale-x-0 after:h-[2px] after:bottom-[-4px] after:left-0 after:bg-secc-gold after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
         }
+        .calendar-day { @apply h-24 md:h-32 p-2 border border-gray-200 rounded; }
+        .calendar-event { @apply text-xs text-white rounded-full px-1 mt-1 truncate; }
     </style>
 </head>
 <body class="bg-secc-offwhite text-secc-charcoal font-sans">
 
+    <!-- Header -->
     <header class="bg-white/90 backdrop-blur-lg shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-4xl font-black font-serif text-secc-blue">SECC</a>
@@ -89,65 +92,28 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero-bg text-white min-h-[80vh] flex flex-col justify-center items-center text-center p-4">
-            <h1 class="text-4xl md:text-7xl font-black font-serif mb-4 drop-shadow-lg">Sawbridgeworth Evangelical Congregational Church</h1>
-            <p class="text-xl md:text-2xl font-light italic max-w-3xl drop-shadow-md">"That we may present everyone fully mature in Christ" - Colossians 1:28</p>
+            <h1 id="hero-title" class="text-4xl md:text-7xl font-black font-serif mb-4 drop-shadow-lg"></h1>
+            <p id="hero-subtitle" class="text-xl md:text-2xl font-light italic max-w-3xl drop-shadow-md"></p>
         </section>
 
+        <!-- About & Beliefs Section -->
         <section id="about" class="py-24 bg-secc-offwhite">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                     <h2 class="text-4xl md:text-5xl font-bold text-secc-blue">A Place to Belong</h2>
-                     <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-lg">We are a Bible-believing, Christ-centered family of all ages. Explore what we believe and what it means to be part of our community.</p>
-                </div>
-                <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-lg">
-                    <h3 class="font-serif text-3xl font-bold text-secc-blue mb-6">Our Core Beliefs</h3>
-                    <div class="space-y-4 text-gray-700">
-                        <p>We are committed to the faithful teaching of the Bible and hold to the historic creeds of the Christian faith. Our beliefs are foundational to everything we do, shaping our worship, our relationships, and our mission.</p>
-                        <p>We are a member of the <a href="#" class="text-secc-teal hover:underline font-semibold">Evangelical Fellowship of Congregational Churches (EFCC)</a> and our core doctrines align with theirs.</p>
-                    </div>
-                     <div class="mt-8">
-                         <a href="https://www.secchurch.org.uk/beliefs" class="btn-accent text-sm">Read Our Full Statement of Faith</a>
-                     </div>
-                </div>
+            <div id="about-content" class="container mx-auto px-6">
+                <!-- Content will be injected by JavaScript -->
             </div>
         </section>
 
+        <!-- Meet the Team Section -->
         <section id="team" class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-secc-blue">Meet the Team</h2>
                     <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-lg">Our church is led by a dedicated team of elders and supported by wonderful staff and volunteers who are passionate about serving our church and community.</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="relative w-48 h-48 mx-auto mb-4">
-                            <img class="rounded-full object-cover w-full h-full shadow-md" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300" alt="Team member photo">
-                        </div>
-                        <h3 class="text-xl font-bold font-serif text-secc-blue">John Doe</h3>
-                        <p class="text-secc-teal font-medium">Lead Pastor</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="relative w-48 h-48 mx-auto mb-4">
-                             <img class="rounded-full object-cover w-full h-full shadow-md" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300" alt="Team member photo">
-                        </div>
-                        <h3 class="text-xl font-bold font-serif text-secc-blue">Jane Smith</h3>
-                        <p class="text-secc-teal font-medium">Youth & Families Worker</p>
-                    </div>
-                     <div class="text-center">
-                        <div class="relative w-48 h-48 mx-auto mb-4">
-                             <img class="rounded-full object-cover w-full h-full shadow-md" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300" alt="Team member photo">
-                        </div>
-                        <h3 class="text-xl font-bold font-serif text-secc-blue">Emily Jones</h3>
-                        <p class="text-secc-teal font-medium">Church Administrator</p>
-                    </div>
-                     <div class="text-center">
-                        <div class="relative w-48 h-48 mx-auto mb-4">
-                            <img class="rounded-full object-cover w-full h-full shadow-md" src="https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=300" alt="Team member photo">
-                        </div>
-                        <h3 class="text-xl font-bold font-serif text-secc-blue">Michael Brown</h3>
-                        <p class="text-secc-teal font-medium">Elder</p>
-                    </div>
+                <div id="team-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team members will be injected by JavaScript -->
                 </div>
                  <div class="text-center mt-12">
                      <a href="/key-people" class="text-secc-blue font-bold hover:text-secc-teal transition-colors text-lg">More about our leadership <i class="fas fa-arrow-right ml-1"></i></a>
@@ -155,59 +121,15 @@
             </div>
         </section>
         
+        <!-- Calendar Section -->
         <section id="calendar" class="py-24 bg-secc-offwhite">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-secc-blue">What's On</h2>
                     <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-lg">There's always something happening at SECC. Check out our calendar for upcoming services, events, and group meetings.</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 max-w-5xl mx-auto">
-                    <div class="flex justify-between items-center mb-6">
-                        <button class="text-secc-blue hover:text-secc-teal"><i class="fas fa-chevron-left fa-lg"></i></button>
-                        <h3 class="text-2xl font-bold text-secc-blue">June 2025</h3>
-                        <button class="text-secc-blue hover:text-secc-teal"><i class="fas fa-chevron-right fa-lg"></i></button>
-                    </div>
-                    <div class="grid grid-cols-7 gap-1 text-center font-medium text-gray-500">
-                        <div class="py-2">Sun</div>
-                        <div class="py-2">Mon</div>
-                        <div class="py-2">Tue</div>
-                        <div class="py-2">Wed</div>
-                        <div class="py-2">Thu</div>
-                        <div class="py-2">Fri</div>
-                        <div class="py-2">Sat</div>
-                    </div>
-                    <div class="grid grid-cols-7 gap-1 text-center">
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">1<div class="text-xs bg-secc-teal text-white rounded-full px-1 mt-1 truncate">Morning Service</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">2</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">3</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">4<div class="text-xs bg-secc-gold text-secc-charcoal rounded-full px-1 mt-1 truncate">Connect Group</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">5</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">6</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">7</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">8<div class="text-xs bg-secc-teal text-white rounded-full px-1 mt-1 truncate">Morning Service</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">9</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">10</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">11<div class="text-xs bg-secc-gold text-secc-charcoal rounded-full px-1 mt-1 truncate">Connect Group</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">12</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">13</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded bg-secc-gold/20 font-bold">14<div class="text-xs bg-secc-rose text-white rounded-full px-1 mt-1 truncate">Community BBQ</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">15<div class="text-xs bg-secc-teal text-white rounded-full px-1 mt-1 truncate">Morning Service</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">16</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">17</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">18<div class="text-xs bg-secc-gold text-secc-charcoal rounded-full px-1 mt-1 truncate">Connect Group</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">19</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">20</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">21</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">22<div class="text-xs bg-secc-teal text-white rounded-full px-1 mt-1 truncate">Morning Service</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">23</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">24</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">25<div class="text-xs bg-secc-gold text-secc-charcoal rounded-full px-1 mt-1 truncate">Connect Group</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">26</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">27</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">28</div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">29<div class="text-xs bg-secc-teal text-white rounded-full px-1 mt-1 truncate">Morning Service</div></div>
-                        <div class="h-24 md:h-32 p-2 border border-gray-200 rounded">30</div>
-                    </div>
+                <div id="calendar-container" class="bg-white rounded-xl shadow-lg p-6 md:p-8 max-w-5xl mx-auto">
+                    <!-- Calendar will be injected by JavaScript -->
                 </div>
                  <div class="text-center mt-12">
                      <a href="https://www.secchurch.org.uk/calendar" class="btn-primary">View All Events</a>
@@ -215,15 +137,195 @@
             </div>
         </section>
 
-        <section id="project" class="cta-bg py-28 text-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-md">Building Project 28:16</h2>
-                <p class="text-xl mb-8 max-w-3xl mx-auto drop-shadow">Join us in our vision to create a space that will serve our community for generations to come. Every contribution makes a difference.</p>
-                <a href="https://www.secchurch.org.uk/building-project-28-16" target="_blank" rel="noopener noreferrer" class="bg-white text-secc-blue font-bold py-4 px-10 rounded-full hover:bg-gray-200 transition duration-300 text-lg transform hover:scale-105 shadow-lg">Learn More & Get Involved</a>
-            </div>
+        <!-- Building Project CTA Section -->
+        <section id="project-cta" class="cta-bg py-28 text-white">
+             <!-- Static Content -->
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="py-24 bg-white">
+             <!-- Static Content -->
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secc-charcoal text-secc-offwhite">
+         <!-- Static Content -->
+    </footer>
+    
+    <script>
+        // --- Contentful Configuration ---
+        // IMPORTANT: Replace these values with your actual Contentful Space ID and Access Token.
+        const CONTENTFUL_SPACE_ID = 'YOUR_SPACE_ID';
+        const CONTENTFUL_ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN';
+        
+        // This is a helper function to fetch data from Contentful.
+        // In a real project, you would use the official Contentful JS SDK, but this works for a simple setup.
+        async function fetchContentfulEntries(contentType) {
+            // If the credentials are placeholders, return mock data to allow the site to render for demonstration.
+            if (CONTENTFUL_SPACE_ID === 'YOUR_SPACE_ID' || CONTENTFUL_ACCESS_TOKEN === 'YOUR_ACCESS_TOKEN') {
+                console.warn("Using Mock Data: Please update your Contentful credentials.");
+                return getMockData(contentType);
+            }
+            
+            const url = `https://cdn.contentful.com/spaces/${CONTENTFUL_SPACE_ID}/environments/master/entries?access_token=${CONTENTFUL_ACCESS_TOKEN}&content_type=${contentType}`;
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Contentful fetch failed with status: ${response.status}`);
+                }
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error("Error fetching from Contentful:", error);
+                // Fallback to mock data on error
+                return getMockData(contentType);
+            }
+        }
+
+        // --- Mock Data Function ---
+        // This function provides sample data so the site looks complete before connecting to Contentful.
+        function getMockData(contentType) {
+            const mockData = {
+                'hero': {
+                    total: 1,
+                    items: [{ fields: {
+                        title: "Sawbridgeworth Evangelical Congregational Church",
+                        subtitle: "\"That we may present everyone fully mature in Christ\" - Colossians 1:28"
+                    }}]
+                },
+                'aboutSection': {
+                    total: 1,
+                    items: [{ fields: {
+                        title: "A Place to Belong",
+                        paragraph1: "We are a Bible-believing, Christ-centered family of all ages. Explore what we believe and what it means to be part of our community.",
+                        beliefsTitle: "Our Core Beliefs",
+                        beliefsParagraph1: "We are committed to the faithful teaching of the Bible and hold to the historic creeds of the Christian faith. Our beliefs are foundational to everything we do, shaping our worship, our relationships, and our mission.",
+                        beliefsParagraph2: "We are a member of the Evangelical Fellowship of Congregational Churches (EFCC) and our core doctrines align with theirs.",
+                        beliefsLinkText: "Read Our Full Statement of Faith",
+                        beliefsLinkUrl: "/beliefs"
+                    }}]
+                },
+                'teamMember': {
+                    total: 4,
+                    items: [
+                        { fields: { name: 'John Doe', role: 'Lead Pastor', photoUrl: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=300' }},
+                        { fields: { name: 'Jane Smith', role: 'Youth & Families Worker', photoUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300' }},
+                        { fields: { name: 'Emily Jones', role: 'Church Administrator', photoUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300' }},
+                        { fields: { name: 'Michael Brown', role: 'Elder', photoUrl: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=300' }}
+                    ]
+                }
+            };
+            return Promise.resolve(mockData[contentType] || { total: 0, items: [] });
+        }
+        
+        // --- Dynamic Content Loading ---
+        
+        // Load Hero Section Content
+        async function loadHero() {
+            const data = await fetchContentfulEntries('hero');
+            if (data.total > 0) {
+                const hero = data.items[0].fields;
+                document.getElementById('hero-title').textContent = hero.title;
+                document.getElementById('hero-subtitle').textContent = hero.subtitle;
+            }
+        }
+
+        // Load About Section Content
+        async function loadAbout() {
+            const aboutContainer = document.getElementById('about-content');
+            const data = await fetchContentfulEntries('aboutSection');
+            if (data.total > 0) {
+                const about = data.items[0].fields;
+                aboutContainer.innerHTML = `
+                    <div class="text-center mb-16">
+                         <h2 class="text-4xl md:text-5xl font-bold text-secc-blue">${about.title}</h2>
+                         <p class="text-gray-600 mt-4 max-w-3xl mx-auto text-lg">${about.paragraph1}</p>
+                    </div>
+                    <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-lg">
+                        <h3 class="font-serif text-3xl font-bold text-secc-blue mb-6">${about.beliefsTitle}</h3>
+                        <div class="space-y-4 text-gray-700">
+                            <p>${about.beliefsParagraph1}</p>
+                            <p>${about.beliefsParagraph2}</p>
+                        </div>
+                         <div class="mt-8">
+                             <a href="${about.beliefsLinkUrl}" class="btn-accent text-sm">${about.beliefsLinkText}</a>
+                         </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Load Team Section Content
+        async function loadTeam() {
+            const teamGrid = document.getElementById('team-grid');
+            const data = await fetchContentfulEntries('teamMember');
+            if (data.total > 0) {
+                teamGrid.innerHTML = data.items.map(item => {
+                    const member = item.fields;
+                    return `
+                        <div class="text-center">
+                            <div class="relative w-48 h-48 mx-auto mb-4">
+                                <img class="rounded-full object-cover w-full h-full shadow-md" src="${member.photoUrl}?q=80&w=300" alt="Photo of ${member.name}">
+                            </div>
+                            <h3 class="text-xl font-bold font-serif text-secc-blue">${member.name}</h3>
+                            <p class="text-secc-teal font-medium">${member.role}</p>
+                        </div>
+                    `;
+                }).join('');
+            }
+        }
+        
+        // Populate Calendar (example)
+        function loadCalendar() {
+             const calendarContainer = document.getElementById('calendar-container');
+             // In a real app, this data would come from ChurchSuite or another calendar source
+             calendarContainer.innerHTML = `
+                <div class="flex justify-between items-center mb-6">
+                    <button class="text-secc-blue hover:text-secc-teal"><i class="fas fa-chevron-left fa-lg"></i></button>
+                    <h3 class="text-2xl font-bold text-secc-blue">June 2025</h3>
+                    <button class="text-secc-blue hover:text-secc-teal"><i class="fas fa-chevron-right fa-lg"></i></button>
+                </div>
+                <div class="grid grid-cols-7 gap-1 text-center font-medium text-gray-500">
+                    <div class="py-2">Sun</div><div class="py-2">Mon</div><div class="py-2">Tue</div><div class="py-2">Wed</div><div class="py-2">Thu</div><div class="py-2">Fri</div><div class="py-2">Sat</div>
+                </div>
+                <div class="grid grid-cols-7 gap-1 text-center">
+                    <div class="calendar-day">1<div class="calendar-event bg-secc-teal">Morning Service</div></div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4<div class="calendar-event bg-secc-gold text-secc-charcoal">Connect Group</div></div>
+                    <div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div>
+                    <div class="calendar-day">8<div class="calendar-event bg-secc-teal">Morning Service</div></div>
+                    <div class="calendar-day">9</div><div class="calendar-day">10</div>
+                    <div class="calendar-day">11<div class="calendar-event bg-secc-gold text-secc-charcoal">Connect Group</div></div>
+                    <div class="calendar-day">12</div><div class="calendar-day">13</div>
+                    <div class="calendar-day bg-secc-gold/20 font-bold">14<div class="calendar-event bg-secc-rose">Community BBQ</div></div>
+                    <div class="calendar-day">15<div class="calendar-event bg-secc-teal">Morning Service</div></div>
+                    <div class="calendar-day">16</div><div class="calendar-day">17</div>
+                    <div class="calendar-day">18<div class="calendar-event bg-secc-gold text-secc-charcoal">Connect Group</div></div>
+                    <div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div>
+                    <div class="calendar-day">22<div class="calendar-event bg-secc-teal">Morning Service</div></div>
+                    <div class="calendar-day">23</div><div class="calendar-day">24</div>
+                    <div class="calendar-day">25<div class="calendar-event bg-secc-gold text-secc-charcoal">Connect Group</div></div>
+                    <div class="calendar-day">26</div><div class="calendar-day">27</div><div class="calendar-day">28</div>
+                    <div class="calendar-day">29<div class="calendar-event bg-secc-teal">Morning Service</div></div>
+                    <div class="calendar-day">30</div>
+                </div>
+             `;
+        }
+
+        // --- Static Content (Left as-is for simplicity) ---
+        // This content is less likely to change frequently but could also be moved to Contentful.
+        function loadStaticContent() {
+            document.getElementById('project-cta').innerHTML = `
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-md">Building Project 28:16</h2>
+                    <p class="text-xl mb-8 max-w-3xl mx-auto drop-shadow">Join us in our vision to create a space that will serve our community for generations to come. Every contribution makes a difference.</p>
+                    <a href="https://www.secchurch.org.uk/building-project-28-16" target="_blank" rel="noopener noreferrer" class="bg-white text-secc-blue font-bold py-4 px-10 rounded-full hover:bg-gray-200 transition duration-300 text-lg transform hover:scale-105 shadow-lg">Learn More & Get Involved</a>
+                </div>`;
+
+            document.getElementById('contact').innerHTML = `
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
                 <div>
                     <h2 class="text-4xl md:text-5xl font-bold text-secc-blue mb-4">Visit Us or Get In Touch</h2>
@@ -255,13 +357,10 @@
                          </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-secc-charcoal text-secc-offwhite">
-        <div class="container mx-auto py-16 px-6">
+            </div>`;
+            
+            document.querySelector('footer').innerHTML = `
+            <div class="container mx-auto py-16 px-6">
             <div class="grid md:grid-cols-3 gap-10">
                 <div>
                     <h3 class="text-2xl font-black font-serif mb-4 text-white">SECC</h3>
@@ -287,34 +386,50 @@
                     </div>
                 </div>
             </div>
-             <div class="mt-16 pt-8 border-t border-gray-700 text-center text-gray-500">
-                <p>© 2025 Sawbridgeworth Evangelical Congregational Church. All rights reserved.</p>
+             <div class="mt-16 pt-8 border-t border-purple-800/50 text-center text-gray-500">
+                <p>&copy; 2025 Sawbridgeworth Evangelical Congregational Church. All rights reserved.</p>
                 <p class="text-sm">Registered Charity: 1201704</p>
             </div>
-        </div>
-    </footer>
-    
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        </div>`;
+        }
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        // --- Initialisation ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load dynamic content
+            loadHero();
+            loadAbout();
+            loadTeam();
+            loadCalendar();
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.pathname === window.location.pathname) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                     if (mobileMenu.classList.contains('hidden') === false) {
-                        mobileMenu.classList.add('hidden');
+            // Load static parts
+            loadStaticContent();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Smooth scroll for nav links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.pathname === window.location.pathname) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(this.getAttribute('href'));
+                        if(targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                         if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
                     }
-                }
+                });
             });
         });
+
     </script>
 </body>
 </html>
