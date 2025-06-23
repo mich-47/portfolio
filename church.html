@@ -157,14 +157,14 @@
     <script>
         // --- Contentful Configuration ---
         // IMPORTANT: Replace these values with your actual Contentful Space ID and Access Token.
-        const CONTENTFUL_SPACE_ID = 'YOUR_SPACE_ID';
-        const CONTENTFUL_ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN';
+        const CONTENTFUL_SPACE_ID = 'ra5xyrlhj44x';
+        const CONTENTFUL_ACCESS_TOKEN = '_KaMoeJA3jtRoxXjMc-VYEHJGvVYnfmUbSxiRcA8sQ8';
         
         // This is a helper function to fetch data from Contentful.
         // In a real project, you would use the official Contentful JS SDK, but this works for a simple setup.
         async function fetchContentfulEntries(contentType) {
             // If the credentials are placeholders, return mock data to allow the site to render for demonstration.
-            if (CONTENTFUL_SPACE_ID === 'YOUR_SPACE_ID' || CONTENTFUL_ACCESS_TOKEN === 'YOUR_ACCESS_TOKEN') {
+            if (CONTENTFUL_SPACE_ID === 'ra5xyrlhj44x' || CONTENTFUL_ACCESS_TOKEN === '_KaMoeJA3jtRoxXjMc-VYEHJGvVYnfmUbSxiRcA8sQ8') {
                 console.warn("Using Mock Data: Please update your Contentful credentials.");
                 return getMockData(contentType);
             }
