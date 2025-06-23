@@ -164,7 +164,7 @@
         // In a real project, you would use the official Contentful JS SDK, but this works for a simple setup.
         async function fetchContentfulEntries(contentType) {
             // If the credentials are placeholders, return mock data to allow the site to render for demonstration.
-            if (CONTENTFUL_SPACE_ID === 'ra5xyrlhj44x' || CONTENTFUL_ACCESS_TOKEN === '_KaMoeJA3jtRoxXjMc-VYEHJGvVYnfmUbSxiRcA8sQ8') {
+            if (CONTENTFUL_SPACE_ID === 'YOUR_SPACE_ID' || CONTENTFUL_ACCESS_TOKEN === 'YOUR_ACCESS_TOKEN') {
                 console.warn("Using Mock Data: Please update your Contentful credentials.");
                 return getMockData(contentType);
             }
