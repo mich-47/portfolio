@@ -160,12 +160,16 @@
         const CONTENTFUL_SPACE_ID = 'ra5xyrlhj44x';
         const CONTENTFUL_ACCESS_TOKEN = '_KaMoeJA3jtRoxXjMc-VYEHJGvVYnfmUbSxiRcA8sQ8';
         
-        // This is a helper function to fetch data from Contentful.
-        // In a real project, you would use the official Contentful JS SDK, but this works for a simple setup.
+        /**
+         * Fetches entries from Contentful.
+         * If credentials are placeholders or if there's an API error, it returns mock data.
+         * @param {string} contentType - The ID of the content type to fetch.
+         * @returns {Promise<object>} - A promise that resolves to the Contentful data or mock data.
+         */
         async function fetchContentfulEntries(contentType) {
-            // If the credentials are placeholders, return mock data to allow the site to render for demonstration.
+            // If the credentials are still the placeholder values, use mock data immediately.
             if (CONTENTFUL_SPACE_ID === 'YOUR_SPACE_ID' || CONTENTFUL_ACCESS_TOKEN === 'YOUR_ACCESS_TOKEN') {
-                console.warn("Using Mock Data: Please update your Contentful credentials.");
+                console.warn(`Using Mock Data for '${contentType}': Please update your Contentful credentials in the HTML file.`);
                 return getMockData(contentType);
             }
             
@@ -173,13 +177,14 @@
             try {
                 const response = await fetch(url);
                 if (!response.ok) {
-                    throw new Error(`Contentful fetch failed with status: ${response.status}`);
+                    // Create a more descriptive error message for easier debugging.
+                    throw new Error(`Contentful API request failed with status: ${response.status}. This often means your Space ID or Access Token is invalid, or the Content Type ('${contentType}') has not been created or published in your Contentful space.`);
                 }
                 const data = await response.json();
                 return data;
             } catch (error) {
-                console.error("Error fetching from Contentful:", error);
-                // Fallback to mock data on error
+                // If the fetch fails for any reason, log a helpful message and fall back to mock data.
+                console.error(`Error fetching '${contentType}' from Contentful. Please check your configuration. Falling back to mock data. Details:`, error.message);
                 return getMockData(contentType);
             }
         }
@@ -267,7 +272,7 @@
                     return `
                         <div class="text-center">
                             <div class="relative w-48 h-48 mx-auto mb-4">
-                                <img class="rounded-full object-cover w-full h-full shadow-md" src="${member.photo}?q=80&w=300" alt="Photo of ${member.name}">
+                                <img class="rounded-full object-cover w-full h-full shadow-md" src="${member.photoUrl}?q=80&w=300" alt="Photo of ${member.name}">
                             </div>
                             <h3 class="text-xl font-bold font-serif text-secc-blue">${member.name}</h3>
                             <p class="text-secc-teal font-medium">${member.role}</p>
@@ -300,7 +305,7 @@
                     <div class="calendar-day">9</div><div class="calendar-day">10</div>
                     <div class="calendar-day">11<div class="calendar-event bg-secc-gold text-secc-charcoal">Connect Group</div></div>
                     <div class="calendar-day">12</div><div class="calendar-day">13</div>
-                    <div class="calendar-day bg-secc-gold/20 font-bold">14<div class="calendar-event bg-secc-rose">Community BBQ</div></div>
+                    <div class="calendar-day bg-secc-gold/20 font-bold">14<div class="calendar-event bg-red-500">Community BBQ</div></div>
                     <div class="calendar-day">15<div class="calendar-event bg-secc-teal">Morning Service</div></div>
                     <div class="calendar-day">16</div><div class="calendar-day">17</div>
                     <div class="calendar-day">18<div class="calendar-event bg-secc-gold text-secc-charcoal">Connect Group</div></div>
@@ -316,7 +321,6 @@
         }
 
         // --- Static Content (Left as-is for simplicity) ---
-        // This content is less likely to change frequently but could also be moved to Contentful.
         function loadStaticContent() {
             document.getElementById('project-cta').innerHTML = `
                 <div class="container mx-auto px-6 text-center">
@@ -386,7 +390,7 @@
                     </div>
                 </div>
             </div>
-             <div class="mt-16 pt-8 border-t border-purple-800/50 text-center text-gray-500">
+             <div class="mt-16 pt-8 border-t border-gray-700 text-center text-gray-500">
                 <p>&copy; 2025 Sawbridgeworth Evangelical Congregational Church. All rights reserved.</p>
                 <p class="text-sm">Registered Charity: 1201704</p>
             </div>
