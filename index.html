@@ -1,70 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Durklebark Studios</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/logo.png">
-</head>
-<body>
-    <header>
-        <img src="images/logo.png" alt="Durklebark Studios" class="logo">
-        <h1>Durklebark Studios</h1>
-        <nav>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Urquhart | Junior Systems Engineer</title>
+    <meta name="description" content="Portfolio of Michael Urquhart, Junior Systems Engineer specializing in embedded logic and PID control. Explore my projects and experience." />
+    <meta name="author" content="Michael Urquhart" />
+    
+    <!-- Google Fonts: Space Grotesk + Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <main>
-        <section id="hero">
-            <h1>Crafting Digital Experiences</h1>
-            <p>Your destination for web development and more.</p>
-            <button>Learn More</button>
-        </section>
+    <meta property="og:title" content="Michael Urquhart | Junior Systems Engineer" />
+    <meta property="og:description" content="Portfolio showcasing embedded systems projects and industrial deployments." />
+    <meta property="og:type" content="website" />
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>A brief introduction about Durklebark Studios...</p>
-        </section>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@michaelurquhart" />
+  </head>
 
-        <section id="services">
-            <h2>Services</h2>
-            <ul>
-                <li>Web Development</li>
-                <li>UI/UX Design</li>  </ul>
-        </section>
-
-        <section id="portfolio">
-            <h2>My Portfolio</h2>
-              <div class="projects-container">
-                 <div class="project">
-                    <img src="..." alt="...">
-                    <div class="project-content">
-                        <h3>Project Title 1</h3>
-                        <p>...</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="..." alt="...">
-                    <div class="project-content">
-                        <h3>Project Title 2</h3>
-                        <p>...</p>
-                    </div>
-                </div>
-                </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Durklebark Studios</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
