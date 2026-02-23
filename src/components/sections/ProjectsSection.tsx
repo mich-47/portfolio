@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import { TiltCard } from "@/components/ui/TiltCard";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { projectsData } from "@/data/portfolioData";
 
@@ -38,7 +39,7 @@ export function ProjectsSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <GlassCard className="group h-full overflow-hidden" hover>
+              <TiltCard className="group h-full overflow-hidden p-0" tiltAmount={8}>
                 {/* Project Image */}
                 <div className="relative aspect-video overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent" />
@@ -47,7 +48,7 @@ export function ProjectsSection() {
                     alt={project.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  
+
                   {/* Hover overlay with links */}
                   <div className="absolute inset-0 flex items-center justify-center gap-4 bg-background/80 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
                     <a
@@ -75,7 +76,7 @@ export function ProjectsSection() {
                   <p className="mt-2 text-sm text-muted-foreground">
                     {project.description}
                   </p>
-                  
+
                   {/* Tech Stack */}
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
@@ -88,7 +89,7 @@ export function ProjectsSection() {
                     ))}
                   </div>
                 </div>
-              </GlassCard>
+              </TiltCard>
             </motion.div>
           ))}
         </div>

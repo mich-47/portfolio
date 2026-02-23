@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { GitHubStats } from "@/components/GitHubStats";
 import { profileData } from "@/data/portfolioData";
 
 export function AboutSection() {
@@ -83,7 +84,7 @@ export function AboutSection() {
             className="flex flex-col gap-4"
           >
             {/* Maps over metrics array from portfolioData to create cards dynamically */}
-          {/* Staggered animation for each metric */}
+            {/* Staggered animation for each metric */}
             {profileData.metrics.map((metric, index) => (
               <GlassCard key={metric.label} className="p-6 text-center" hover>
                 <motion.div
@@ -105,6 +106,19 @@ export function AboutSection() {
             ))}
           </motion.div>
         </div>
+
+        {/* GitHub Stats - Live data integration */}
+        {profileData.social.githubUsername && (
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-8"
+          >
+            <GitHubStats username={profileData.social.githubUsername} />
+          </motion.div>
+        )}
       </div>
     </section>
   );
