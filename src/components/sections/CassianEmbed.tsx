@@ -38,7 +38,7 @@ export const CassianEmbed = () => {
               This is the live URL deployed via Render.
             */}
                         <iframe
-                            src="https://c-a-s-s-i-a-n-project.onrender.com/static/index.html"
+                            src="https://c-a-s-s-i-a-n-project-1.onrender.com/static/index.html"
                             className="w-full h-[750px] border-0"
                             title="C.A.S.S.I.A.N. Interactive Demo"
                             allow="microphone"
