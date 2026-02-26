@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const CassianEmbed = () => {
     return (
-        <section id="cassian" className="py-20 relative overflow-hidden bg-black/50 backdrop-blur-sm border-t border-white/5">
+        <section id="cassian" className="py-20 relative overflow-hidden bg-black/50 backdrop-blur-sm">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none" />
 
