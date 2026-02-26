@@ -34,7 +34,25 @@ export const projectsData = [
     id: 1,
     title: "Micromouse MK.1",
     description: "Autonomous maze-solving robot on Raspberry Pi Pico. Implements advanced PID control algorithms for sensor feedback and navigation.",
-    image: "/micromouse.png",
+    image: "", // Replaced with code snippet
+    codeSnippet: {
+      language: "python",
+      filename: "pid_controller.py",
+      code: `def compute_pid(self, error, dt):
+    # Proportional
+    self.p_term = self.kp * error
+    
+    # Integral (with anti-windup)
+    self.i_term += self.ki * error * dt
+    self.i_term = clamp(self.i_term, -self.max_i, self.max_i)
+    
+    # Derivative
+    d_err = (error - self.prev_error) / dt
+    self.d_term = self.kd * d_err
+    
+    self.prev_error = error
+    return self.p_term + self.i_term + self.d_term`
+    },
     tech: ["Python", "MicroPython", "I2C", "PID Control", "Raspberry Pi Pico"],
     link: "#",
     github: "#",
@@ -42,9 +60,23 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "Enterprise Ops Hardware Rollout",
+    title: "Enterprise Ops Rollout",
     description: "Mass hardware deployment for Charles River Associates. Managed 50+ units with zero support downtime using ITIL v4 methodology.",
-    image: "/enterprise-ops.png",
+    image: "", // Replaced with terminal snippet
+    codeSnippet: {
+      language: "terminal",
+      filename: "deployment_logs.sh",
+      code: `$ ./provision --batch=EU-WEST-4
+[INFO] Initializing AD binding protocol...
+[OK] Connect to enterprise domain Controller-01
+[INFO] Applying ITIL v4 baseline security policies
+[OK] Disk encryption verified: AES-256-XTS
+[INFO] Deploying agent packages...
+  -> crowdstrike_falcon... [OK]
+  -> zscaler_client...     [OK]
+[SUCCESS] 50/50 endpoints provisioned successfully.
+[INFO] Zero SLA breaches detected.`
+    },
     tech: ["Logistics", "ITIL v4", "Batch Processing", "Hardware Deployment"],
     link: "#",
     github: "#",
@@ -52,9 +84,30 @@ export const projectsData = [
   },
   {
     id: 3,
-    title: "PID Control System Simulator",
+    title: "PID System Simulator",
     description: "Educational simulator for tuning PID parameters in real-time. Demonstrates core embedded logic principles used in industrial applications.",
-    image: "/pid-simulator.png",
+    image: "",
+    codeSnippet: {
+      language: "python",
+      filename: "simulation_engine.py",
+      code: `async def run_simulation(plant, controller, hz=100):
+    dt = 1.0 / hz
+    t = 0.0
+    
+    while t < MAX_SIM_TIME:
+        # Sample physical plant state
+        process_variable = await plant.read_sensor()
+        
+        # Calculate control effort
+        error = setpoint - process_variable
+        effort = controller.compute(error, dt)
+        
+        # Apply effort to actuators
+        await plant.apply_actuator(effort)
+        
+        log_telemetry(t, process_variable, effort)
+        t += dt`
+    },
     tech: ["Python", "Control Theory", "Visualization", "Real-time Feedback"],
     link: "#",
     github: "#",
