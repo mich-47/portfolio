@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://mich-47.github.io/portfolio/sitemap.xml
+

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8870A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#080C12" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark background -->
+  <rect width="512" height="512" rx="120" fill="#080C12"/>
+  
+  <!-- Subtle amber glow overlay -->
+  <rect width="512" height="512" rx="120" fill="url(#glow)"/>
+  
+  <!-- Outer corner-cut border (technical/engineering aesthetic) -->
+  <path d="M 120 40 L 392 40 L 472 120 L 472 392 L 392 472 L 120 472 L 40 392 L 40 120 Z" fill="none" stroke="#E8870A" stroke-width="12" stroke-opacity="0.6"/>
+  
+  <!-- Stylized abstract M U -->
+  <g fill="none" stroke="#E8870A" stroke-width="48" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- M -->
+    <path d="M 130 350 L 130 160 L 210 240 L 290 160 L 290 350"/>
+    <!-- U (offset or integrated, let's just make it a bold M.U block) -->
+    <!-- Actually, let's do a sharp, thick M that spans the center -->
+  </g>
+  
+  <!-- Refined monogram 'MU' -->
+  <text x="256" y="320" font-family="'Syne', 'Inter', sans-serif" font-weight="800" font-size="220" fill="#E8870A" text-anchor="middle" letter-spacing="-10">MU</text>
+  
+  <!-- Tech accents -->
+  <rect x="80" y="80" width="24" height="24" fill="#E8870A"/>
+  <rect x="408" y="408" width="24" height="24" fill="#E8870A"/>
+</svg>

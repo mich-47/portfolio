@@ -1,0 +1,14 @@
+{
+  "name": "Michael Urquhart | Systems Engineer",
+  "short_name": "M.Urquhart",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#080c12",
+  "background_color": "#080c12",
+  "display": "standalone"
+}
